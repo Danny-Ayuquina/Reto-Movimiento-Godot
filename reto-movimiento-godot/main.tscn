@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://player_base.tscn" id="2_player_base"]
+[ext_resource type="Script" path="res://player.gd" id="3_player"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Hud" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 440.0
+offset_bottom = 240.0
+
+[node name="Player" parent="." instance=ExtResource("2_player_base")]
+position = Vector2(576, 500)
+script = ExtResource("3_player")
